@@ -1,4 +1,16 @@
+<script type="text/javascript">
+  document.body.innerHTML = '';
+</script>
 <h1>Create an Article</h1>
+
+<% if @article.errors.any? %>
+<h3>The Following Errors prevented the article from getting created</h3>
+  <ul>
+    <% @article.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
 
 <%= form_for @article do |f| %>
   <p>

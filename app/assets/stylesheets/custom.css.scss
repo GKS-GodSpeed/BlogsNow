@@ -1,0 +1,65 @@
+@import "bootstrap";
+
+
+#logo {
+  float: left;
+  font-size: 2em;
+  color: #D51E19;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #EE3D22;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: asset-url("black_hole.jpg");
+  background-size: cover;
+  height: 550px;
+}
+
+.jumbotron h1 {
+  color: #E25A07;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.btn-xlarge {
+  font-size: 1.8em;
+  background-color: #A3787B;
+}
+
+footer {
+  margin-top: 45px;
+  paddind-top: 5px;
+  border-top: 1px solid red;
+  color: #EE3D22;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+  padding: 3px;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}

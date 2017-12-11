@@ -2,71 +2,19 @@
 <HTML>
 
   <HEAD>
-
-    <style>
-
-      header, footer{
-        padding: 1em;
-        color: red;
-        background-color: black;
-        clear: left;
-        text-align: center;
-      }
-
-      nav{
-        float: left;
-        max-width: 120px;
-        margin: 0;
-        padding: 1em;
-      }
-
-      nav ul{
-        list-style-type: none;
-        padding: 0;
-        background-color: red;
-      }
-
-      nav li a{
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 12px;
-        text-decoration: none;
-        padding: 5;
-        background-color: red;  
-      }
-
-      h1, h2, h3{
-        background-color: white;
-        text-decoration-color: orange;
-      }
-    </style>
   </HEAD>
 
   <BODY>
     
-    <header>
-      <h1 style="text-align: center;">WELCOME</h1>
-    </header>
-    <nav> 
-      <ul>
-       <li><h3><%= link_to 'Home', root_path %></h3></li>
-       <li><h3><%= link_to 'About', about_path %></h3></li>
-       <li><h3><%= link_to 'Blog', articles_path %></h3></li>
-      </ul>
-    </nav>
-
-    <br>
-    <br>
-    <p>
-     <h2 style="text-align:center;">
+    <h1 style="text-align:center;">
       This is The Home Page For the Blog Application
-     </h2>
-    </p>
-
-    <footer>
-      <h3 style="text-align: center;">Copyright &copy; GaurishShaw</h3>
-    </footer>
+    </h1>
+    <br>
+    <br>
+    <%= link_to 'About', about_path %> |
+    <%= link_to 'Blog', articles_path %>
+    
+    
   </BODY> 
 
 </HTML>

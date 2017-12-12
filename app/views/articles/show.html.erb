@@ -1,13 +1,22 @@
+<h2 align="center">TITLE: <%= @article.title%></h2>
 
-<h1>Showing Selected Article</h1>
+<br>
 
-<p>
-  Title: <%= @article.title%>
-</p>
+<div class="col-md-10 offset-md-1">
+  <div class="card card-inverse" style="background-color: #C8C2C1">
+    <div class="card-block" style="margin: 20px">
+      <h4 class="center card-title"><strong><p>DESCRIPTION</p></strong></h4>
+      <hr style="background-color: #E3623F; height: 1px">
+      <p class="card-text"><%= simple_format(@article.description) %></p>
+      <br>
+      <div class="article-actions">
+        <%= link_to 'Edit this Article', edit_article_path(@article), method: "get", class:"btn btn-md btn-primary" %>
+         <%= link_to 'Delete this Article', article_path(@article), method: :delete, data: { confirm: "Are You Sure you want to DELETE the Article?"}, class:"btn btn-md btn-danger" %>
+        <%= link_to 'View all Articles', articles_path, method: "get", class:"btn btn-md btn-success" %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  Description: <%= @article.description%>
-</p>
+<br>
 
-<%= link_to 'EDIT this Article', edit_article_path(@article), method: "get" %> |
-<%= link_to 'Back to Article Listing', articles_path, method: "get" %>

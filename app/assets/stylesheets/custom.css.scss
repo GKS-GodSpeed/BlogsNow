@@ -38,6 +38,22 @@
   background-color: #A3787B;
 }
 
+.article-actions {
+  border-top: 1px solid red;
+  padding-top: 5px;
+}
+
+.article-title {
+  font-weight: weight;
+  font-size: 1.5em;
+}
+
+.article-body {
+  border-top: 1px solid red;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 footer {
   margin-top: 45px;
   paddind-top: 5px;
@@ -63,3 +79,4 @@ footer ul li {
   float: left;
   margin-left: 15px;
 }
+

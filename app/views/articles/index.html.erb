@@ -1,25 +1,25 @@
 <br>
-<h1>Listing All Articles</h1>
+<h1 align="center">Listing All Articles</h1>
 
 <br>
-<p>
-  <%= link_to 'Create New Article', new_article_path, method: "get" %>
-</p>
 
-<br>
-<table>
-  <tr>
-    <th>TITLE</th>
-    <th>DESCRIPTION</th>
-  </tr>
-
-  <% @articles.each do |a| %>
-  <tr>
-    <td><%= a.title %></td>
-    <td><%= a.description %>  || </td>
-    <td><%= link_to 'Edit', edit_article_path(a), method: "get" %> |</td>
-    <td><%= link_to 'Show', article_path(a), method: "get" %> |</td> 
-    <td><%= link_to 'Delete', article_path(a), method: :delete, data: {confirm: "Are you Sure?"} %> |</td>
-  </tr>
-  <% end %>
-</table>
+<% @articles.each do |a| %>
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <div class="card card-inverse" style="background-color: #C8C2C1">
+        <div class="card-block" style="margin: 20px">
+          <div class="article-title">
+            <%= link_to a.title, article_path(a) %>
+          </div>
+          <div class="article-body">
+            <%= truncate(a.description, length: 150) %>
+          </div>
+          <div class="article-actions">
+            <%= link_to 'Edit this Article', edit_article_path(a), method: "get", class:"btn btn-md btn-primary" %>
+            <%= link_to 'Delete this Article', article_path(a), method: :delete, data: { confirm: "Are You Sure you want to DELETE the Article?"}, class:"btn btn-md btn-danger" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

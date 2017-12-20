@@ -2,5 +2,12 @@
 <h1 align="center">Listing All Articles</h1>
 
 <br>
+<div class="pagination justify-content-center">
+  <%= will_paginate %>
+</div>
 
 <%= render 'article', obj: @articles %>
+
+<div class="pagination justify-content-center">
+  <%= will_paginate %>
+</div>

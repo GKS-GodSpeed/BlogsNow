@@ -1,6 +1,6 @@
 # README
 
-This is the repository for the first alpha-blog app based on rails
+This is the repository for the first BlogsNow app based on rails
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

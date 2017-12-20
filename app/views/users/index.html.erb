@@ -1,0 +1,20 @@
+<h1 align="center">All Bloggers</h1>
+<br>
+<div align="center">
+  <% @users.each do |u| %>
+    <ul class="listing">
+      <div class="row">
+        <div class="col-md-4 offset-md-4">
+          <div class="card card-inverse" style="background-color: #C8C2C1; padding: 10px">
+            <div class="card-block" style="margin: 2px">
+              <li><%= link_to gravatar_for(u), user_path(u) %></li>
+              <li class="card-title"><%= link_to u.username, user_path(u) %></li>
+              <li class="card-body"><small><%= pluralize(u.articles.count, "article") if u.articles %></small></li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+    <br>
+  <% end %>
+</div>
